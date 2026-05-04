@@ -2,6 +2,11 @@
 import Button from '../ui/Button.astro';
 import { Image } from 'astro:assets';
 import heroImage from '../../assets/Hero.webp';
+const {
+    eyebrow="ACCA Certified • UK-Based • Trusted Since 2010",
+    title="Accounting for business owners who want clarity and control",
+    description="We partner with ambitious small businesses and limited companies across the UK, providing proactive accounting services that go beyond compliance.",
+} = Astro.props;
 ---
 
 
@@ -10,10 +15,10 @@ import heroImage from '../../assets/Hero.webp';
         <div class="hero__grid">
             <div class="hero-grid__content">
                 <div class="eyebrow">
-                    <p class="">ACCA Certified • UK-Based • Trusted Since 2010</p>
+                    <p class="">{eyebrow}</p>
                 </div>
-                <h1 class="h1">Accounting for business owners who want clarity and control</h1>
-                <p>We partner with ambitious small businesses and limited companies across the UK, providing proactive accounting services that go beyond compliance.</p>
+                <h1 class="h1">{title}</h1>
+                <p>{description}</p>
                 <hr>
                 <div class="button-group"><Button href="/contact" variant="primary">Get in touch</Button> 
                     <Button href="/services" variant="secondary">View Services</Button></div>
