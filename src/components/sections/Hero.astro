@@ -1,3 +1,10 @@
+---
+import Button from '../ui/Button.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/Hero.webp';
+---
+
+
 <section>
     <div class="container">
         <div class="hero__grid">
@@ -5,12 +12,15 @@
                 <div class="eyebrow">
                     <p class="">ACCA Certified • UK-Based • Trusted Since 2010</p>
                 </div>
-                <h1 class="h1">Accounting for business owners who want clarity and control
-</h1>
+                <h1 class="h1">Accounting for business owners who want clarity and control</h1>
                 <p>We partner with ambitious small businesses and limited companies across the UK, providing proactive accounting services that go beyond compliance.</p>
                 <hr>
+                <div class="button-group"><Button href="/contact" variant="primary">Get in touch</Button> 
+                    <Button href="/services" variant="secondary">View Services</Button></div>
             </div>
-            <div class="hero__image"></div>
+            <div class="hero__image">
+                <Image src={heroImage} alt="Woman working at her desk" />
+            </div>
         </div>
     </container>
 </section>
@@ -27,9 +37,31 @@
             grid-template-columns: 1fr;
         }
     }
+    p {
+        color: var(--color-muted);
+    }
+    .eyebrow p {
+        font-size: var(--text-sm);
+        font-weight: 600;
+        color: var(--color-brand);
+        text-transform: uppercase;
+        margin-bottom: var(--space-sm);
+    }
+    hr {
+        margin: var(--space-sm) 0;
+        border-top: 1px solid var(--color-brand-soft);
+    }
 
-    h1 {
-        line-height: 1.2;
-        font-size: var(--text-xl);
+    .hero-grid__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--radius-md);
+        object-fit: cover;
     }
 </style>
