@@ -1,0 +1,35 @@
+<section>
+    <div class="container">
+        <div class="hero__grid">
+            <div class="hero-grid__content">
+                <div class="eyebrow">
+                    <p class="">ACCA Certified • UK-Based • Trusted Since 2010</p>
+                </div>
+                <h1 class="h1">Accounting for business owners who want clarity and control
+</h1>
+                <p>We partner with ambitious small businesses and limited companies across the UK, providing proactive accounting services that go beyond compliance.</p>
+                <hr>
+            </div>
+            <div class="hero__image"></div>
+        </div>
+    </container>
+</section>
+
+<style>
+    .hero__grid {
+        display: grid;
+        gap: var(--space-lg);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+        .hero__grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    h1 {
+        line-height: 1.2;
+        font-size: var(--text-xl);
+    }
+</style>
